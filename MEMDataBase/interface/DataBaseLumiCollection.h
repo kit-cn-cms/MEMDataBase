@@ -1,7 +1,7 @@
 #ifndef DATABASELUMICOLLECTION_H
 #define DATABASELUMICOLLECTION_H
 
-#include "MEMDataBase/MEMDataBase/interface/DataBaseInterval.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseInterval.h"
 
 class LumiCollection{
 public:

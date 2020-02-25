@@ -1,11 +1,11 @@
-#include "MEMDataBase/MEMDataBase/interface/MEMDataBase.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/MEMDataBase.h"
 
 int MEMDataBase::GetValue(){
   return 10.0;
 }
 
 MEMDataBase::MEMDataBase(){
-  dataBaseDirectory="/nfs/dust/cms/user/kelmorab/MEDataBase";
+  dataBaseDirectory="/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/";
   
 }
 
@@ -51,8 +51,12 @@ void MEMDataBase::PrintStructure(){
 }
 
 DataBaseMEMResult MEMDataBase::GetMEMResult(TString sample, Long64_t runNumber, Long64_t lumiSection, Long64_t eventNumber){
+//     std::cout<<"reading MEM DB main "<<std::endl;
   for(unsigned int isample=0; isample<sampleNames.size();isample++){
     if(sampleNames.at(isample)==sample){
+      // std::cout << "#######################" << std::endl;
+      // std::cout << "DEBUG: run   lumi   eventNR   " <<  runNumber << "   " << lumiSection << "   " << eventNumber << std::endl;
+      // std::cout << "#######################" << std::endl;
       return sampleDataBases.at(isample)->GetMEMResult(runNumber,lumiSection,eventNumber);
     }
   }

@@ -9,8 +9,8 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
-#include "MEMDataBase/MEMDataBase/interface/DataBaseMEMResult.h"
-#include "MEMDataBase/MEMDataBase/interface/DataBaseRunCollection.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseMEMResult.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseRunCollection.h"
 #include <map>
 #include <cstdio>
 #include "TMath.h"

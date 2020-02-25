@@ -3,8 +3,8 @@
 
 #include "TFile.h"
 #include "TString.h"
-#include "MEMDataBase/MEMDataBase/interface/DataBaseSample.h"
-#include "MEMDataBase/MEMDataBase/interface/DataBaseMEMResult.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseSample.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseMEMResult.h"
 
 
 class MEMDataBase{

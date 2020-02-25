@@ -1,4 +1,4 @@
-#include "MEMDataBase/MEMDataBase/interface/DataBaseMEMResult.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseMEMResult.h"
 
 DataBaseMEMResult::DataBaseMEMResult(){
   p=-99;

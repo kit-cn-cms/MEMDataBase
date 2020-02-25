@@ -1,7 +1,7 @@
 #ifndef DATABASERUNCOLLECTION_H
 #define DATABASERUNCOLLECTION_H
 
-#include "MEMDataBase/MEMDataBase/interface/DataBaseLumiCollection.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseLumiCollection.h"
 
 
 class RunCollection{

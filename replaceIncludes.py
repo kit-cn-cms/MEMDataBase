@@ -21,6 +21,7 @@ for fn in filelist:
     newline=line
     if "#include \"MEMDataBase/MEMDataBase/" in line:
       newline=line.replace("#include \"MEMDataBase/", "#include \""+cwd+"/")
+      print f, newline
     newlist.append(newline)
 
   f.close()

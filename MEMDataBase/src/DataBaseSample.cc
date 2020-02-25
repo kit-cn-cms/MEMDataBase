@@ -1,4 +1,4 @@
-#include "MEMDataBase/MEMDataBase/interface/DataBaseSample.h"
+#include "/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CodeforScriptGenerator/MEMDataBase/MEMDataBase/interface/DataBaseSample.h"
 
 
 
@@ -94,7 +94,7 @@ TString DataBaseSample::GetFileNameForEvent(const Long64_t runNumber, const Long
     }
   }
   
-//   std::cout<<" Event with "<<runNumber<<" "<<lumiSection<<" "<<eventNumber<<" is in "<<relevantFileName<<std::endl;
+  // std::cout<<" Event with "<<runNumber<<" "<<lumiSection<<" "<<eventNumber<<" is in "<<relevantFileName<<std::endl;
   return relevantFileName;
   
 }
@@ -126,12 +126,17 @@ DataBaseMEMResult DataBaseSample::GetMEMResult(const Long64_t runNumber, const L
 //   std::cout<<"starting at "<<startEvt<<std::endl;
   
   bool found=false;
-  for(Int_t ievt=startEvt; ievt<startEvt+LookUpStepSize+10; ievt++){
+//   for(Int_t ievt=startEvt; ievt<startEvt+LookUpStepSize+10; ievt++){
+  for(Int_t ievt=startEvt; ievt<maxEventsPerTree; ievt++){
+//     if(ievt==startEvt+LookUpStepSize){std::cout<<" -------------------------"<<std::endl;}
     currentOpenTree->GetEntry(ievt);
+//     std::cout<<ievt<<" "<<brEvent<<" "<<brLumi<<" "<<brRun<<std::endl;
     if(brEvent==eventNumber and brLumi==lumiSection and brRun==runNumber){
+//         std::cout<<"FOUND "<<ievt<<" "<<brEvent<<" "<<brLumi<<" "<<brRun<<std::endl;
       found=true;
       break;
     }
+   if(brEvent>eventNumber){break;} 
   }
   
   if(found){
